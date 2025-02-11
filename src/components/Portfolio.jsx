@@ -49,40 +49,42 @@ const Portfolio = () => {
   return (
     <div
       name="projects"
-      className="bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-screen"
+      className="bg-gradient-to-b from-black to-gray-800 w-full text-white py-10"
     >
-      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
-        <div className="pb-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-8 flex flex-col justify-center w-full">
+        {/* Heading */}
+        <div className="pb-6 text-center">
           <p className="text-4xl font-bold inline border-b-4 border-gray-500">
             Projects
           </p>
-          <p className="py-6">Check out some of my projects right here</p>
+          <p className="py-4 text-gray-300">Check out some of my projects</p>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
+        {/* Project Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {projects.map(({ id, src, demoLink, codeLink }) => (
-            <div key={id} className="shadow-md shadow-gray-600 rounded-lg ">
+            <div key={id} className="shadow-md shadow-gray-600 rounded-lg overflow-hidden">
               <img
                 src={src}
-                alt=""
-                className="rounded-md duration-200 hover:scale-105"
+                alt="Project"
+                className="rounded-t-md w-full h-52 object-cover duration-300 hover:scale-105"
               />
-              <div className="flex items-center justify-center">
+              <div className="flex justify-between items-center bg-gray-900 p-4">
                 <a
                   href={demoLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105"
+                  className="text-blue-400 hover:text-blue-300 font-semibold transition duration-300"
                 >
-                  Demo
+                  Live Demo
                 </a>
                 <a
-                  href={demoLink}
+                  href={codeLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105"
+                  className="text-green-400 hover:text-green-300 font-semibold transition duration-300"
                 >
-                  code
+                  Source Code
                 </a>
               </div>
             </div>
@@ -94,3 +96,4 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
+

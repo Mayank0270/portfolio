@@ -4,41 +4,54 @@ const About = () => {
   return (
     <div
       name="about"
-      className="w-full h-screen bg-gradient-to-b from-gray-800 to-black text-white"
+      className="w-full min-h-screen bg-gradient-to-b from-gray-800 to-black text-white flex items-center px-6 sm:px-12"
     >
-      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
-        <div className="pb-8">
-          <p className="text-4xl font-bold inline border-b-4 border-gray-500">
-            About
+      <div className="max-w-5xl mx-auto flex flex-col justify-center w-full">
+        {/* Heading */}
+        <div className="pb-6 text-center sm:text-left">
+          <p className="text-4xl sm:text-5xl font-bold inline border-b-4 border-gray-500">
+            About Me
           </p>
         </div>
 
-        <p className="text-xl mt-20">
-          Hello! I'm Mayank Mathur, a passionate and driven frontend web
-          developer with a strong foundation in computer applications. I am
-          currently pursuing my B.Tech degree in Computer Science from
-          Government Engineering College, Bikaner, and have further refined my
-          skills in frontend development through a specialized course at OILAB
-          Learning Institute, Jodhpur.
-        </p>
+        {/* About Content */}
+        <div className="space-y-6 text-lg sm:text-xl leading-relaxed text-gray-300">
+          <p>
+            Hello! I'm{" "}
+            <span className="font-semibold text-white">Mayank Mathur</span>, a
+            passionate frontend web developer with a strong foundation in
+            computer applications. I am currently pursuing my{" "}
+            <span className="text-white font-medium">B.Tech in Computer Science</span>{" "}
+            from Government Engineering College, Bikaner, and have refined my
+            frontend skills through a specialized course at{" "}
+            <span className="text-white font-medium">
+              OILAB Learning Institute, Jodhpur
+            </span>.
+          </p>
 
-        <br />
+          <p>
+            I have a keen eye for design and a love for creating beautiful,
+            responsive, and user-friendly websites. I enjoy building seamless
+            web experiences using{" "}
+            <span className="text-white font-medium">
+              HTML, CSS, JavaScript, React, and Tailwind CSS
+            </span>. I am always eager to learn new technologies and stay
+            updated with the latest trends in web development.
+          </p>
 
-        <p className="text-xl">
-          I'm a passionate frontend web developer with a keen eye for design and
-          a love for creating beautiful, responsive, and user-friendly websites.
-          As a fresher, I am eager to bring creative ideas to life using
-          technologies like HTML, CSS, JavaScript, and React. I enjoy building
-          seamless web experiences that not only look great but also perform
-          efficiently.I am constantly learning and exploring new trends in web development to enhance my skills and stay updated with the latest technologies.
-        </p>
-
-        <br/>
-
-        <p className="texl-xl">I am excited to contribute my creativity, problem-solving skills, and technical knowledge to build seamless digital solutions. Let’s connect and collaborate to create something amazing!</p>
+          <p>
+            I am excited to contribute my creativity, problem-solving skills,
+            and technical knowledge to build seamless digital solutions.{" "}
+            <span className="text-white font-medium">
+              Let’s connect and collaborate
+            </span>{" "}
+            to create something amazing!
+          </p>
+        </div>
       </div>
     </div>
   );
 };
 
 export default About;
+
